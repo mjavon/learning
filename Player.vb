@@ -27,6 +27,14 @@
 
     Property height As Long
     Property weight As Long
-    ReadOnly Property displayHeight As String
-    ReadOnly Property displayWeight As String
+    ReadOnly Property displayHeight As String ' add handling for metric system later
+        Get
+            Return Me.height / 12 & "' " & Me.height Mod 12 & """"
+        End Get
+    End Property
+    ReadOnly Property displayWeight As String ' add handling for metric system later
+        Get
+            Return Me.weight & " lbs"
+        End Get
+    End Property
 End Class

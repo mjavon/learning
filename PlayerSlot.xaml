@@ -26,7 +26,7 @@
         <Label Content="2nd Line FWD" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="33" VerticalAlignment="Center" Width="73" FontSize="16" Grid.Row="2"/>
         <Label Content="CROUSE," HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="55" VerticalAlignment="Center" Width="128" FontSize="22" Grid.Row="2" Grid.Column="1"/>
         <Label Content="LAWSON" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="55" VerticalAlignment="Top" Width="128" FontSize="22" Grid.Row="3" Grid.Column="1" Margin="0,6,0,0"/>
-        <Label Content="Top 6 (High)" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="33" VerticalAlignment="Center" Width="73" FontSize="16" Grid.Row="2" Grid.Column="2"/>
+        <Label Content="Top 6 (High)" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="33" VerticalAlignment="Center" Width="Auto" FontSize="16" Grid.Row="2" Grid.Column="2"/>
         <Label Content="$5.500 AAV / 3 Years Remaining" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="262" FontSize="16" Grid.Row="4" Grid.Column="1" Margin="0,127,0,0"/>
 
     </Grid>
