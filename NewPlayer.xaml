@@ -47,9 +47,17 @@
             <Setter Property="Height" Value="Auto"></Setter>
             <Setter Property="Width" Value="Auto"></Setter>
         </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5,5,5,5"></Setter>
+            <Setter Property="Padding" Value="5,5,5,5"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Width" Value="Auto"></Setter>
+            <Setter Property="Height" Value="Auto"></Setter>
+        </Style>
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -118,7 +126,7 @@
         </ComboBox>
         <Slider Name="sldrJersey" Grid.Row="5" Grid.Column="2" Minimum="1" Maximum="99"/>
         <Slider Name="sldrOverall" Grid.Row="6" Grid.Column="2" Minimum="1" Maximum="99"/>
-        <StackPanel Grid.Row="7" Grid.Column="1" Orientation="Horizontal">
+        <StackPanel Grid.Row="7" Grid.Column="2" Orientation="Horizontal">
             <ComboBox Name="cbPotential" >
                 <ComboBoxItem Content="Franchise"/>
                 <ComboBoxItem Content="Elite"/>
@@ -141,5 +149,35 @@
         </StackPanel>
         <Slider Name="sldrHeight" Grid.Row="8" Grid.Column="2" Minimum="60" Maximum="84"/>
         <Slider Name="sldrWeight" Grid.Row="9" Grid.Column="2" Minimum="120" Maximum="300"/>
+        <StackPanel Grid.Row="10" Grid.Column="2" Orientation="Horizontal">
+            <Label Content="$"></Label>
+            <TextBox MinWidth="80"></TextBox>
+            <Label Content="m AAV /" FontWeight="Normal"></Label>
+            <ComboBox>
+                <ComboBoxItem Content="0"/>
+                <ComboBoxItem Content="1"/>
+                <ComboBoxItem Content="2"/>
+                <ComboBoxItem Content="3"/>
+                <ComboBoxItem Content="4"/>
+                <ComboBoxItem Content="5"/>
+                <ComboBoxItem Content="6"/>
+                <ComboBoxItem Content="7"/>
+                <ComboBoxItem Content="8"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="11" Grid.Column="2" Orientation="Horizontal">
+            <Label Content="GP"></Label>
+            <TextBox MinWidth="40"></TextBox>
+            <Label Content="G"></Label>
+            <TextBox MinWidth="40"></TextBox>
+            <Label Content="A"></Label>
+            <TextBox MinWidth="40"></TextBox>
+            <Label Content="Plus-Minus"></Label>
+            <TextBox MinWidth="40"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="12" Grid.Column="2" Orientation="Horizontal">
+            <Button Content="Save"></Button>
+            <Button Content="Cancel"></Button>
+        </StackPanel>
     </Grid>
 </UserControl>
