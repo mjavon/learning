@@ -120,7 +120,7 @@
                 <ComboBoxItem Content="G"/>
             </ComboBox>
         </StackPanel>
-        <ComboBox Name="cbShootsGloves" Grid.Row="4" Grid.Column="2" Width="28" HorizontalAlignment="Left">
+        <ComboBox Name="cbShootsGloves" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left">
             <ComboBoxItem Content="L"/>
             <ComboBoxItem Content="R"/>
         </ComboBox>
