@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:learning"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1200" Width="1851">
     <Grid>
-        <local:PlayerSlot HorizontalAlignment="Center" VerticalAlignment="Center" Height="414" Width="780"/>
-
+        <local:NewPlayer HorizontalAlignment="Left" Height="960" Margin="122,120,0,0" VerticalAlignment="Top" Width="1656"/>
     </Grid>
 </Window>

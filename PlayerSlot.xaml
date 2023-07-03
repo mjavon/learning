@@ -4,11 +4,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:learning"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" Height="125" Width="500">
+    <UserControl.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="13"></Setter>
+            <Setter Property="Height" Value="Auto"></Setter>
+            <Setter Property="Width" Value="Auto"></Setter>
+            <Setter Property="Margin" Value="3"></Setter>
+            <Setter Property="Padding" Value="3"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <Border BorderBrush="Black" BorderThickness="2" CornerRadius="25,25,25,25">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -19,15 +29,15 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <Label Content="LW" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="33" Margin="0,0,0,0" VerticalAlignment="Center" Width="73" FontSize="16"/>
-        <Label Content="#67" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="33" VerticalAlignment="Center" Width="73" FontSize="16" Grid.Column="2"/>
-        <Label Content="86 OVR" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="33" VerticalAlignment="Center" Width="73" FontSize="16" Grid.Row="1"/>
-        <Label Content="TWF" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="33" VerticalAlignment="Center" Width="73" FontSize="16" Grid.Column="2" Grid.Row="1"/>
-        <Label Content="2nd Line FWD" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="33" VerticalAlignment="Center" Width="73" FontSize="16" Grid.Row="2"/>
-        <Label Content="CROUSE," HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="55" VerticalAlignment="Center" Width="128" FontSize="22" Grid.Row="2" Grid.Column="1"/>
-        <Label Content="LAWSON" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="55" VerticalAlignment="Top" Width="128" FontSize="22" Grid.Row="3" Grid.Column="1" Margin="0,6,0,0"/>
-        <Label Content="Top 6 (High)" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="33" VerticalAlignment="Center" Width="Auto" FontSize="16" Grid.Row="2" Grid.Column="2"/>
-        <Label Content="$5.500 AAV / 3 Years Remaining" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="262" FontSize="16" Grid.Row="4" Grid.Column="1" Margin="0,127,0,0"/>
-
+        <Label Name="labPosition" Content="LW/RW" Grid.Row="0" Grid.Column="0"/>
+        <Label Name="labJerseyNumber" Content="#67" Grid.Row ="0" Grid.Column="2"/>
+        <Label Name="labOverallRating"  Content="86 OVR" Grid.Row="1" Grid.Column="0"/>
+        <Label Name="labPlayerType"  Content="TWF" Grid.Row="1" Grid.Column="2" />
+        <Label Name="labPlayerRole"  Content="2nd Line FWD" Grid.Row="2" Grid.Column="0"/>
+        <Label Name="labHeightWeight"  Content="5&apos;11&quot; 205 lbs" Grid.Row="1" Grid.Column="1"/>
+        <Label Name="labDisplayName"  Content="LAWSON CROUSE" FontSize="24" Grid.Row="0" Grid.Column="1" FontWeight="Bold"/>
+        <Label Name="labDisplayPotential"  Content="Top 6 (High)" Grid.Row="2" Grid.Column="2"/>
+        <Label Name="labDisplayContract"  Content="$5.500 AAV / 3 Years Remaining" Grid.Row="2" Grid.Column="1"/>
     </Grid>
+    </Border>
 </UserControl>

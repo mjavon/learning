@@ -1,0 +1,145 @@
+﻿<UserControl x:Class="NewPlayer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:learning"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="12"></Setter>
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Width" Value="Auto"></Setter>
+            <Setter Property="Height" Value="Auto"></Setter>
+            <Setter Property="Padding" Value="5,5,5,5"></Setter>
+            <Setter Property="Margin" Value="5,5,5,5"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="12"></Setter>
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Setter Property="Width" Value="Auto"></Setter>
+            <Setter Property="Height" Value="Auto"></Setter>
+            <Setter Property="Padding" Value="5,5,5,5"></Setter>
+            <Setter Property="Margin" Value="5,5,5,5"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="FontSize" Value="12"></Setter>
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Setter Property="Width" Value="Auto"></Setter>
+            <Setter Property="Height" Value="Auto"></Setter>
+            <Setter Property="Padding" Value="5,5,5,5"></Setter>
+            <Setter Property="Margin" Value="5,5,5,5"></Setter>
+        </Style>
+        <Style TargetType="Slider">
+            <Setter Property="Margin" Value="5,5,5,5"></Setter>
+            <Setter Property="IsSnapToTickEnabled" Value="True"></Setter>
+            <Setter Property="TickFrequency" Value="1"></Setter>
+            <Setter Property="AutoToolTipPlacement" Value="TopLeft"></Setter>
+            <Setter Property="AutoToolTipPrecision" Value="0"></Setter>
+            <Setter Property="Padding" Value="5,5,5,5"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="StackPanel">
+            <Setter Property="Height" Value="Auto"></Setter>
+            <Setter Property="Width" Value="Auto"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--Do all labels first in column zero-->
+        <Label Content="First Name:" Grid.Column="0"/>
+        <Label Content="Last Name:" Grid.Row="1" Grid.Column="0"/>
+        <Label Content="Age:" Grid.Row="2" Grid.Column="0"/>
+        <Label Content="Position:" Grid.Row="3" Grid.Column="0"/>
+        <Label Content="Shoots/Gloves:" Grid.Row="4" Grid.Column="0"/>
+        <Label Content="Jersey #:" Grid.Row="5" Grid.Column="0"/>
+        <Label Content="Overall:" Grid.Row="6" Grid.Column="0"/>
+        <Label Content="Potential:" Grid.Row="7" Grid.Column="0"/>
+        <Label Content="Height:" Grid.Row="8" Grid.Column="0"/>
+        <Label Content="Weight:" Grid.Row="9" Grid.Column="0"/>
+        <Label Content="Contract:" Grid.Row="10" Grid.Column="0"/>
+        <Label Content="Stats:" Grid.Row="11" Grid.Column="0"/>
+
+        <!--Any "helper" values for sliders in column one-->
+        <Label Grid.Row="2" Grid.Column="1" Content="{Binding Value, ElementName=sldrAge}" FontWeight="Normal" HorizontalAlignment="Center"></Label>
+        <Label Grid.Row="5" Grid.Column="1" Content="{Binding Value, ElementName=sldrJersey}" FontWeight="Normal" HorizontalAlignment="Center"></Label>
+        <Label Grid.Row="6" Grid.Column="1" Content="{Binding Value, ElementName=sldrOverall}" FontWeight="Normal" HorizontalAlignment="Center"></Label>
+        <Label Grid.Row="8" Grid.Column="1" Content="{Binding Value, ElementName=sldrHeight}" FontWeight="Normal" HorizontalAlignment="Center"></Label>
+        <Label Grid.Row="9" Grid.Column="1" Content="{Binding Value, ElementName=sldrWeight}" FontWeight="Normal" HorizontalAlignment="Center"></Label>
+        
+        <!--Put all the interactives in column two-->
+        <TextBox Name="txtFirstName" Grid.Column="2"/>
+        <TextBox Name="txtLastName" Grid.Row ="1" Grid.Column="2"/>
+        <Slider Name="sldrAge" Grid.Row="2" Grid.Column="2" Minimum="18" Maximum="50"/>
+        <StackPanel Orientation="Horizontal" Grid.Row ="2" Grid.Column="2">
+            <ComboBox Name="cbPrimaryPositiong">
+                <ComboBoxItem Content="LW"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="RW"/>
+                <ComboBoxItem Content="LD"/>
+                <ComboBoxItem Content="RD"/>
+                <ComboBoxItem Content="G"/>
+            </ComboBox>
+            <Label Content="/"></Label>
+            <ComboBox Name="cbSecondaryPos">
+                <ComboBoxItem Content="LW"/>
+                <ComboBoxItem Content="C"/>
+                <ComboBoxItem Content="RW"/>
+                <ComboBoxItem Content="LD"/>
+                <ComboBoxItem Content="RD"/>
+                <ComboBoxItem Content="G"/>
+            </ComboBox>
+        </StackPanel>
+        <ComboBox Name="cbShootsGloves" Grid.Row="4" Grid.Column="2" Width="28" HorizontalAlignment="Left">
+            <ComboBoxItem Content="L"/>
+            <ComboBoxItem Content="R"/>
+        </ComboBox>
+        <Slider Name="sldrJersey" Grid.Row="5" Grid.Column="2" Minimum="1" Maximum="99"/>
+        <Slider Name="sldrOverall" Grid.Row="6" Grid.Column="2" Minimum="1" Maximum="99"/>
+        <StackPanel Grid.Row="7" Grid.Column="1" Orientation="Horizontal">
+            <ComboBox Name="cbPotential" >
+                <ComboBoxItem Content="Franchise"/>
+                <ComboBoxItem Content="Elite"/>
+                <ComboBoxItem Content="Top 6 FWD"/>
+                <ComboBoxItem Content="Top 9 FWD"/>
+                <ComboBoxItem Content="Bottom 6 FWD"/>
+                <ComboBoxItem Content="Top 4 DEF"/>
+                <ComboBoxItem Content="Top 6 DEF"/>
+                <ComboBoxItem Content="7th DEF"/>
+                <ComboBoxItem Content="Starter"/>
+                <ComboBoxItem Content="Fringe Starter"/>
+                <ComboBoxItem Content="Backup"/>
+                <ComboBoxItem Content="AHLer"/>
+            </ComboBox>
+            <ComboBox Name="cbPotentialLikelihood" >
+                <ComboBoxItem Content="Low"/>
+                <ComboBoxItem Content="Med"/>
+                <ComboBoxItem Content="High"/>
+            </ComboBox>
+        </StackPanel>
+        <Slider Name="sldrHeight" Grid.Row="8" Grid.Column="2" Minimum="60" Maximum="84"/>
+        <Slider Name="sldrWeight" Grid.Row="9" Grid.Column="2" Minimum="120" Maximum="300"/>
+    </Grid>
+</UserControl>

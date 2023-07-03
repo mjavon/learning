@@ -22,3 +22,7 @@ C:\Users\mjvja6\source\repos\myApp\obj\Debug\net6.0-windows\learning.pdb
 C:\Users\mjvja6\source\repos\myApp\obj\Debug\net6.0-windows\learning.genruntimeconfig.cache
 C:\Users\mjvja6\source\repos\myApp\obj\Debug\net6.0-windows\ref\learning.dll
 C:\Users\mjvja6\source\repos\myApp\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.vb
+C:\Users\mjvja6\source\repos\myApp\obj\Debug\net6.0-windows\ForwardDepthChart.g.vb
+C:\Users\mjvja6\source\repos\myApp\obj\Debug\net6.0-windows\ForwardDepthChart.baml
+C:\Users\mjvja6\source\repos\myApp\obj\Debug\net6.0-windows\NewPlayer.g.vb
+C:\Users\mjvja6\source\repos\myApp\obj\Debug\net6.0-windows\NewPlayer.baml
