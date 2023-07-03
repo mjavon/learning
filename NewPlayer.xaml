@@ -101,7 +101,7 @@
         <TextBox Name="txtFirstName" Grid.Column="2"/>
         <TextBox Name="txtLastName" Grid.Row ="1" Grid.Column="2"/>
         <Slider Name="sldrAge" Grid.Row="2" Grid.Column="2" Minimum="18" Maximum="50"/>
-        <StackPanel Orientation="Horizontal" Grid.Row ="2" Grid.Column="2">
+        <StackPanel Orientation="Horizontal" Grid.Row ="3" Grid.Column="2">
             <ComboBox Name="cbPrimaryPositiong">
                 <ComboBoxItem Content="LW"/>
                 <ComboBoxItem Content="C"/>
